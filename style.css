@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale--Blue: hsl(223, 100%, 88%);
+  --Light--Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very--Dark--Blue: hsl(209, 33%, 12%);
+  --Font--size: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 1000px;
+  max-width: 90vw;
+  padding: 30px 0px;
+  font-size: var(--Font--size);
+}
+.container .title {
+  text-align: center;
+}
+.container .title p {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--Gray);
+}
+
+.container .title strong {
+  color: #000;
+}
+
+.container .form {
+}
+.container .form input {
+  border-radius: 20px;
+  outline: none;
+}
+
+.container .form .error {
+  font-size: 13px;
+  color: var(--Light--Red);
+  margin: 5px 0 0 15px;
+}
+
+[type="email"] {
+  border: 2px var(--Pale--Blue) solid;
+  width: 400px;
+  max-width: 90vw;
+  margin-right: 10px;
+  padding: 12px 30px;
+}
+
+[type="submit"] {
+  border: none;
+  background: var(--Blue);
+  color: #fff;
+  width: 180px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px;
+}
+
+.container img {
+  width: 600px;
+  max-width: 90vw;
+}
+.social-medias {
+  padding-top: 40px;
+}
+.social-medias ion-icon {
+  color: var(--Blue);
+  margin-left: 10px;
+  border-radius: 1px solid var(--Gray);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.container #copy {
+  font-size: 14px;
+  color: var(--Gray);
+}
+
+#active {
+  visibility: visible;
+}
+
+.error:not(#active) {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 737px) {
+  [type="email"] {
+    position: relative;
+  }
+
+  [type="submit"] {
+    width: 90vw;
+    margin-top: 40px;
+  }
+
+  .container .form {
+    position: relative;
+  }
+
+  .container .form .error {
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    margin: 0;
+  }
+}
